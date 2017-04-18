@@ -1,41 +1,70 @@
 # NESS2017
-Materials for workshop, "Mixed-effects Models with Julia" at the 2017 New England Statistics Symposium
+Materials for workshop, "Mixed-effects Models with Julia" at the 2017 New England Statistics Symposium, Friday, April 21, 2017
 
-# Accessing Julia
+### Installing Julia
 
-## JuliaBox
+- It will help if participants install [`Julia`](https://julialang.org) (version 0.5.1), before the workshop.  An alternative is to use the online service at https://juliabox.com, as described below.
+
+- Julia can be installed from https://julialang.org/downloads/ or as the no-cost version of `JuliaPro` from https://juliacomputing.com.
+
+- `JuliaPro` is a "batteries included" version of Julia with several of the more widely-used packages.  Those using Windows or Mac OSX may find it more convenient than downloading the base release and adding packages.
+
+### Jupyter notebooks
+
+- We will use [Jupyter notebooks](https://jupyter.org) throughout the course.
+- The interface to Jupyter notebooks is included with `JuliaPro`.
+- Those who install Julia from the download site will need to add the `IJulia` package.  See below for instructions on adding Julia packages.
+
+### Julia packages
+
+- Julia packages are added with, e.g.
+```
+Pkg.add("MixedModels")
+```
+
+- It is a good practice to run
+```
+Pkg.update()
+```
+weekly or more frequently to ensure you have the latest package versions.
+
+- To check which version of a package is installed, use, e.g.
+```
+Pkg.status("MixedModels")
+```
+
+- To see all of the directly and indirectly installed packages, use
+```
+versioninfo(true)
+```
+
+- In addition to [`MixedModels`](https://github.com/dmbates/MixedModels.jl), we will use `RData`, `Gadfly`, and `IJulia`.
+
+
+### Julia packages in general
+
+- Julia packages are always available as `git` repositories.  At present they must be available on https://github.com
+
+- Registered packages are listed on https://pkg.julialang.org
+
+- Documentation for packages is usually linked on the github repository.  Search for the package name on https://pkg.julialang.org then click on the name to get to the github repository.
+
+- In the package listing you will see that several packages are owned by github groups, such as [`JuliaStats`](https://github.com/JuliaStats/), `JuliaIO`, `JuliaOpt`, `JuliaDiffEQ`, ...  These packages are expected to be well-maintained.
+
+### Notebooks in this repository
+
+The notebooks (files ending in `.ipynb`) whose names start with numbers are intended to be read in the sequence.
+
+
+### JuliaBox
 
 - [`juliabox.com`](https://juliabox.com) provides a browser interface to `Julia` through [`Jupyter`](https://jupyter.org) notebooks.
     - login using one of the methods shown there
-    - a good environment for classroom demonstrations
-    - works best in live demo mode
     - the `Sync` tab allows access to [`github.com`](https://github.com) repositories or `Google Drive` directories.
     - the `Files` tab provides uploading/downloading of files or folders
     - the `Console` provides shell access
     - Jupyter notebooks can be run from the `Jupyter` tab
-    - the first couple of sections of the tutorial may be of interest.  Later sections are more Python-oriented
-
-## Downloads
-
-- the web site for the open source system is https://julialang.org
-- note the [`downloads`](https://julialang.org/downloads), [`docs`](https://docs.julialang.org), and [`packages`](https://pkg.julialang.org) tabs.
-- under the [`learning`](https://julialang.org/learning/) tab there is a link to Julia version of the [`quantitative economics`](https://lectures.quantecon.org/jl/) course that may be useful.
-- for those on Windows or Mac OSX, *JuliaPro* may be a better choice for installation.
-
-## JuliaPro
-
-- [`juliacomputing.com`](https://juliacomputing.com) is a company formed by core developers to provide commercial support
-- They provide a *batteries included* version called `JuliaPro` for Windows and Mac OSX.
-- You do need to create a login or use your google or facebook login before you can download the free version.
-
-
-# Running Julia
-
-- the REPL (read-eval-print-loop) provided by the application or the command-line
-- Jupyter notebooks
-   - also used for Python, R, Scala, etc.
-   - need the `IJulia` package for Julia installed
-- Juno within the Atom editor (part of JuliaPro) provides an integrated development environment (IDE)
+    - the first couple of sections of the tutorial may be of interest.  Later sections are Python-oriented and perhaps of less interest.
 
 # Importing data
 
@@ -65,17 +94,3 @@ Materials for workshop, "Mixed-effects Models with Julia" at the 2017 New Englan
 
 - the `PyCall` package essentially integrates Python into Julia.
 - the `Pandas` package provides access to the `pandas` package for `Python`
-
-# Julia packages in general
-
-- Julia packages are always available as `git` repositories.  At present they must be available on https://github.com
-
-- Registered packages are listed on https://pkg.julialang.org
-
-- Documentation for packages is usually linked on the github repository.  Search for the package name on https://pkg.julialang.org then click on the name to get to the github repository.
-
-- In the package listing you will see that several packages are owned by github groups, such as [`JuliaStats`](https://github.com/JuliaStats/), `JuliaIO`, `JuliaOpt`, `JuliaDiffEQ`.  These packages are expected to be well-maintained.
-
-# Notebooks in this repository
-
-The notebooks (files ending in `.ipynb`) whose names start with numbers are intended to be read in the sequence.
