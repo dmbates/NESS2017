@@ -38,7 +38,7 @@ Pkg.status("MixedModels")
 versioninfo(true)
 ```
 
-- In addition to [`MixedModels`](https://github.com/dmbates/MixedModels.jl), you should install `DataFramesMeta`, `Gadfly`, `IJulia`, `Rcall`, and `RData`.  Other packages we will use, (e.g. DataFrames, GLM) will be installed as requirements of these packages.  Ensure that you have v0.8.0 or later of the `MixedModels` package.
+- In addition to [`MixedModels`](https://github.com/dmbates/MixedModels.jl), you should install `DataFramesMeta`, `FreqTables`, `Gadfly`, `IJulia`, `Rcall`, and `RData`.  Other packages we will use, (e.g. DataFrames, GLM) will be installed as requirements of these packages.  Ensure that you have v0.8.0 or later of the `MixedModels` package.
 
 ### Julia packages in general
 
