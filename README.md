@@ -38,23 +38,21 @@ Pkg.status("MixedModels")
 versioninfo(true)
 ```
 
-- In addition to [`MixedModels`](https://github.com/dmbates/MixedModels.jl), we will use `RData`, `Gadfly`, and `IJulia`.
-
+- In addition to [`MixedModels`](https://github.com/dmbates/MixedModels.jl), you should install `DataFramesMeta`, `Gadfly`, `IJulia`, `Rcall`, and `RData`.  Other packages we will use, (e.g. DataFrames, GLM) will be installed as requirements of these packages.  Ensure that you have v0.8.0 or later of the `MixedModels` package.
 
 ### Julia packages in general
 
-- Julia packages are always available as `git` repositories.  At present they must be available on https://github.com
+- Julia packages are `git` repositories.  At present registered packages must be available on https://github.com
 
 - Registered packages are listed on https://pkg.julialang.org
 
-- Documentation for packages is usually linked on the github repository.  Search for the package name on https://pkg.julialang.org then click on the name to get to the github repository.
+- Documentation for packages is usually linked in the github repository.  Search for the package name on https://pkg.julialang.org then click on the name to get to the github repository.
 
-- In the package listing you will see that several packages are owned by github groups, such as [`JuliaStats`](https://github.com/JuliaStats/), `JuliaIO`, `JuliaOpt`, `JuliaDiffEQ`, ...  These packages are expected to be well-maintained.
+- In the package listing you will see that several packages are owned by github groups, such as [`JuliaStats`](https://github.com/JuliaStats/), `JuliaIO`, `JuliaOpt`, `JuliaDiffEQ`, ...  These packages can be expected to be well-maintained.
 
 ### Notebooks in this repository
 
 The notebooks (files ending in `.ipynb`) whose names start with numbers are intended to be read in the sequence.
-
 
 ### JuliaBox
 
